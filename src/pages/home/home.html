@@ -5,10 +5,9 @@
 </ion-header>
 
 <ion-content padding>
-    <h3>Icons list</h3>
-    <button ion-item *ngFor="let i of icons">
-        {{i.name}}
-    </button>
+    <div class="icons">
+        <i class="mdi mdi-{{i.name}}" *ngFor="let i of icons"></i>
+    </div>
 </ion-content>
 
 <ion-footer>
