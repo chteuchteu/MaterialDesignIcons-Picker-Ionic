@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{icon.name}}</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="icons-wrap">
+    <i class="mdi mdi-{{icon.name}} huge-icon"></i>
+    <i class="mdi mdi-{{icon.name}} medium-icon"></i>
+    <i class="mdi mdi-{{icon.name}} small-icon"></i>
+  </div>
+
+  <ion-item-divider>
+    Icon information
+  </ion-item-divider>
+
+  <ion-item>
+    <ion-label>CSS classname</ion-label>
+    <div item-content>mdi-{{icon.name}}</div>
+  </ion-item>
+  <ion-item>
+    <ion-label>Author</ion-label>
+    <div item-content>{{icon.author}}</div>
+  </ion-item>
+  <ion-item>
+    <ion-label>Since version</ion-label>
+    <div item-content>{{icon.version}}</div>
+  </ion-item>
+  <ion-item>
+    <ion-label>Codepoint</ion-label>
+    <div item-content>{{icon.codepoint}}</div>
+  </ion-item>
+  <ion-item *ngIf="icon.aliases.length > 0">
+    <ion-label>Aliases</ion-label>
+    <div item-content>
+      <p *ngFor="let alias of icon.aliases">
+        {{alias}}
+      </p>
+    </div>
+  </ion-item>
+
+  <a ion-item href="https://materialdesignicons.com/icon/{{icon.name}}">
+    <ion-icon name="open" item-left></ion-icon>
+    Open in materialdesignicons.com
+  </a>
+</ion-content>

@@ -3,11 +3,13 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Icons } from "../providers/icons";
+import { IconPage } from "../pages/icon/icon";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    IconPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -15,7 +17,8 @@ import { Icons } from "../providers/icons";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    IconPage
   ],
   providers: [Icons]
 })
