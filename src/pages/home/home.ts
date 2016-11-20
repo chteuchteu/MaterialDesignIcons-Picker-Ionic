@@ -25,4 +25,16 @@ export class HomePage {
     });
     iconModal.present();
   }
+
+  onCreatedByClick() {
+    this.openUrl('https://www.quentin-stoeckel.fr');
+  }
+
+  onGitHubClick() {
+    this.openUrl('https://github.com/chteuchteu/MaterialDesignIcons-Picker-Ionic');
+  }
+
+  openUrl(url) {
+    cordova.InAppBrowser.open(url, '_system', 'location=yes');
+  }
 }
