@@ -15,6 +15,11 @@
 
 <ion-content padding>
   <div class="icons">
-    <i class="mdi mdi-{{i.name}}" *ngFor="let i of icons" (click)="onIconClick(i)"></i>
+    <button ion-button icon-only color="dark" clear
+            class="icon-button"
+            *ngFor="let i of icons"
+            (click)="onIconClick(i)">
+      <i class="mdi mdi-{{i.name}}"></i>
+    </button>
   </div>
 </ion-content>

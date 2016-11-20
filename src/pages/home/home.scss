@@ -1,31 +1,29 @@
 page-home {
-    .icons {
-        font-size: 0;
-        text-align: center;
+  .icons {
+    font-size: 0;
+    text-align: center;
 
-        .mdi {
-            display: inline-block;
-            margin: $icon-margin;
-            padding: $icon-padding;
-            border: $icon-border solid transparent;
-            border-radius: 2px;
-            transition-duration: 150ms;
-            width: $icon-size + 2*($icon-padding) + 2*($icon-border);
-            height: $icon-size + 2*($icon-padding) + 2*($icon-border);
-
-            color: $icons-color;
-            font-size: $icon-size;
-            overflow: hidden;
-
-            &:hover, &.active {
-                background-color: map_get($colors, 'secondary');
-                color: $icons-color-hover!important;
-                border-color: rgba(#000, 0.1);
-            }
-
-            &.active {
-                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            }
-        }
+    .icon-button {
+      height: auto!important;
     }
+
+    .mdi {
+      display: inline-block;
+      margin: $icon-margin;
+      padding: $icon-padding;
+      border: $icon-border solid transparent;
+      border-radius: 2px;
+      transition-duration: 150ms;
+      width: $icon-size + 2*($icon-padding) + 2*($icon-border);
+      height: $icon-size + 2*($icon-padding) + 2*($icon-border);
+
+      color: $icons-color;
+      font-size: $icon-size;
+      overflow: hidden;
+
+      &.active {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      }
+    }
+  }
 }
