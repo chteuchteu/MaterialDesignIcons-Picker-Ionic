@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {NavController, ModalController} from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import { InAppBrowser } from 'ionic-native';
 
 import { Icon } from "../../models/icon";
 import { Icons } from "../../providers/icons";
@@ -35,6 +36,6 @@ export class HomePage {
   }
 
   openUrl(url) {
-    cordova.InAppBrowser.open(url, '_system', 'location=yes');
+    InAppBrowser.open(url, '_system', 'location=yes');
   }
 }
